@@ -2,13 +2,13 @@ import React from 'react';
 import './palette.css';
 import SchemeColor from '../SchemeColor/schemecolor';
 
-const Palette = ({ paletteData }) => {
+const Palette = ({ paletteData }) => (
   <div className="palette">
     <div
       className={
-        (paletteData.direction = 'vertical'
+        paletteData.direction === 'vertical'
           ? 'palette-scheme palette-scheme--vertical'
-          : 'palette-scheme palette-scheme--horizontal')
+          : 'palette-scheme palette-scheme--horizontal'
       }
     >
       <img
@@ -34,7 +34,7 @@ const Palette = ({ paletteData }) => {
         .
       </p>
     </div>
-  </div>;
-};
+  </div>
+);
 
 export default Palette;
